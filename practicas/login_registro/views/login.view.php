@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&display=swap" rel="stylesheet">
-    <title>Sign Up!</title>
+    <title>Login</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="title">Sign up!</h1>
+      <h1 class="title">Login</h1>
       <hr class="border">
 
       <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="form" name="login">
@@ -21,11 +21,7 @@
         </div>
 
         <div class="form-group">
-          <i class="icon left fa fa-lock"></i><input type="password" name="password" class="password" placeholder="Password:"/>
-        </div>
-
-        <div class="form-group">
-          <i class="icon left fa fa-user"></i><input type="password" name="password2" class="password_btn" placeholder="Repeat your password:"/>
+          <i class="icon left fa fa-user"></i><input type="password" name="password" class="password_btn" placeholder="Your password:"/>
           <i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
           <!-- Este login del onclick es el name del form que habíamos puesto arriba. Estamos "creando" un botón con js, sin que lo sea realmente. -->
         </div>
@@ -37,10 +33,11 @@
             </ul>
           </div>
         <?php endif; ?>
+
       </form>
       <p class="text-signup">
-        Do you already have an account?
-        <a href="login.php">Login</a>
+        Don't you have an account yet?
+        <a href="signup.php">Sign up</a>
       </p>
     </div>
   </body>
